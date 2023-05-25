@@ -6,23 +6,25 @@ variable "agent_count" {
 # Set the values for these variable in terraform.tfvars
 variable "aks_service_principal_app_id" {
   default = ""
+  sensitive = true
 }
 
 variable "aks_service_principal_client_secret" {
   default = ""
+  sensitive = true
 }
 
 variable "cluster_name" {
-  default = "k8stest"
+  default = "k8s-test"
 }
 
 variable "dns_prefix" {
-  default = "k8stest"
+  default = "k8s-test"
 }
 
 # Refer to https://azure.microsoft.com/global-infrastructure/services/?products=monitor for available Log Analytics regions.
 variable "log_analytics_workspace_location" {
-  default = "westus"
+  default = "canadacentral"
 }
 
 variable "log_analytics_workspace_name" {
@@ -31,7 +33,7 @@ variable "log_analytics_workspace_name" {
 
 # Refer to https://azure.microsoft.com/pricing/details/monitor/ for Log Analytics pricing
 variable "log_analytics_workspace_sku" {
-  default = "PerGB2018"
+  default = "Free"
 }
 
 variable "resource_group_location" {
@@ -46,4 +48,5 @@ variable "resource_group_name_prefix" {
 
 variable "ssh_public_key" {
   default = ""
+  sensitive = true
 }

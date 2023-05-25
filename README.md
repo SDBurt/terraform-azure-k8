@@ -8,11 +8,6 @@
 - Be sure to set your subscription for azure-cli with `az account set --subscrip
 tion="<SUBSCRIPTION_ID>"` otherwise `terraform plan` and `terraform apply` hangs
 
-## PLANNING
-
-```
-terraform plan -var-file="terraform.tfvars"
-```
 
 ## ENVIRONMENT VARIABLES
 
